@@ -1,0 +1,137 @@
+<main class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-8">Mi Cuenta</h1>
+
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <div class="lg:col-span-1">
+      <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div class="flex flex-col items-center text-center mb-6">
+          <div class="relative w-24 h-24 mb-4">
+            <img src="/placeholder.svg" alt="Nombre del Usuario" class="rounded-full object-cover border-4 border-gray-100 w-full h-full" />
+          </div>
+          <h2 class="text-xl font-bold">Nombre del Usuario</h2>
+          <p class="text-gray-500">correoejemplo.com</p>
+        </div>
+
+        <hr class="my-4" />
+
+        <nav class="space-y-2">
+          <a href="/mi-cuenta" class="flex items-center gap-3 p-2 rounded-md bg-blue-600 text-white font-medium w-full">👤 <span>Perfil</span></a>
+          <a href="/mi-cuenta/boletas" class="flex items-center gap-3 p-2 rounded-md text-gray-600 hover:bg-gray-100 font-medium w-full">🎫 <span>Mis Boletas</span></a>
+          <a href="/mi-cuenta/pagos" class="flex items-center gap-3 p-2 rounded-md text-gray-600 hover:bg-gray-100 font-medium w-full">💳 <span>Métodos de Pago</span></a>
+          <a href="/mi-cuenta/notificaciones" class="flex items-center gap-3 p-2 rounded-md text-gray-600 hover:bg-gray-100 font-medium w-full">🔔 <span>Notificaciones</span></a>
+          <a href="/mi-cuenta/configuracion" class="flex items-center gap-3 p-2 rounded-md text-gray-600 hover:bg-gray-100 font-medium w-full">⚙️ <span>Configuración</span></a>
+          <a href="/cerrar-sesion" class="flex items-center gap-3 p-2 rounded-md text-red-600 hover:bg-red-50 font-medium w-full mt-8">🚪 <span>Cerrar Sesión</span></a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="lg:col-span-3 space-y-10">
+      <!-- Perfil -->
+      <section class="bg-white rounded-lg shadow p-6">
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <h2 class="text-xl font-bold">Información Personal</h2>
+            <p class="text-sm text-gray-500">Actualiza tu información de perfil</p>
+          </div>
+          <button class="border border-gray-300 text-gray-700 text-sm rounded-md px-3 py-1">✏️ Editar</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block font-medium mb-1">Nombre Completo</label>
+            <input type="text" class="w-full border rounded-md px-3 py-2" value="Nombre del Usuario" readonly />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Correo Electrónico</label>
+            <input type="email" class="w-full border rounded-md px-3 py-2" value="correo@ejemplo.com" readonly />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Teléfono</label>
+            <input type="tel" class="w-full border rounded-md px-3 py-2" value="3200000000" readonly />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Dirección</label>
+            <input type="text" class="w-full border rounded-md px-3 py-2" value="Calle falsa 123" readonly />
+          </div>
+        </div>
+      </section>
+
+      <!-- Cambiar contraseña -->
+      <section class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-bold mb-2">Cambiar Contraseña</h2>
+        <p class="text-sm text-gray-500 mb-4">Actualiza tu contraseña para mantener tu cuenta segura</p>
+        <div class="space-y-4">
+          <div>
+            <label class="block font-medium mb-1">Contraseña Actual</label>
+            <input type="password" class="w-full border rounded-md px-3 py-2" />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Nueva Contraseña</label>
+            <input type="password" class="w-full border rounded-md px-3 py-2" />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Confirmar Nueva Contraseña</label>
+            <input type="password" class="w-full border rounded-md px-3 py-2" />
+          </div>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Actualizar Contraseña</button>
+        </div>
+      </section>
+
+      <!-- Preferencias -->
+      <section class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-bold mb-2">Preferencias</h2>
+        <p class="text-sm text-gray-500 mb-4">Personaliza tu experiencia</p>
+
+        <h3 class="font-medium mb-2">Categorías de Interés</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" class="h-4 w-4" checked />
+            <span>Conciertos</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" class="h-4 w-4" checked />
+            <span>Deportes</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" class="h-4 w-4" checked />
+            <span>Teatro</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" class="h-4 w-4" />
+            <span>Cine</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" class="h-4 w-4" />
+            <span>Festivales</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" class="h-4 w-4" />
+            <span>Gastronomía</span>
+          </label>
+        </div>
+
+        <hr class="my-4" />
+
+        <h3 class="font-medium mb-2">Notificaciones</h3>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center">
+            <div>
+              <p class="font-medium">Promociones</p>
+              <p class="text-sm text-gray-500">Ofertas y descuentos</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" value="" class="sr-only peer" checked />
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 rounded-full peer peer-checked:bg-blue-600"></div>
+              <div class="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full transition-all peer-checked:translate-x-full"></div>
+            </label>
+          </div>
+          <!-- Puedes duplicar para otros tipos de notificaciones -->
+        </div>
+
+        <div class="mt-6">
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Guardar Preferencias</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
