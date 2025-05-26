@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './categorias.component.html',
   styleUrl: './categorias.component.css'
 })

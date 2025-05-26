@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Kevin Andres Grijalba",
+    "lastname": "",
+    "email": "kevingr2508@gmail.com",
+    "phone": "3192068490",
+    "street": "Mz 179 cs 29",
+    "password": "kandresgr"
+  },
+  {
+    "id": 2,
+    "name": "Valeri Silena",
+    "lastname": "",
+    "email": "valerimedrano20@gmail.com",
+    "phone": "3127962668",
+    "street": "Calle 5 Casa 40",
+    "password": "lolitoperez"
+  }
+]

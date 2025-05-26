@@ -7,6 +7,6 @@
   }
 
   .events-container .event-item {
-
+  word-wrap: break-word;
   }
 }

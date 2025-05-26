@@ -1,0 +1,85 @@
+<main class="container mx-auto px-4 py-8">
+  <a href="/public" class="flex items-center text-blue-600 mb-6 hover:underline">
+    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+    </svg>
+    Volver a eventos
+  </a>
+
+  <div class="p-6 md:p-10 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="w-full h-64 md:h-96 bg-gray-100 rounded-lg overflow-hidden mb-6">
+        <div class="relative">
+            <span
+              class="absolute top-2 left-2 bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full shadow">
+              {{ event?.categoria }}
+            </span>
+        </div>
+        <img [ngSrc]="event?.banner || ''" [alt]="event?.titulo" width="500" height="500"
+             class="w-full h-full object-cover"/>
+      </div>
+
+      <div class="md:flex md:gap-10">
+        <div class="flex-1">
+          <h1 class="text-3xl font-bold mb-4">{{ event?.titulo }}</h1>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 mb-6">
+            <div class="flex items-center">
+              <span class="mr-2 text-blue-600">📅</span>
+              <span>{{ event?.fechacompleta }}</span>
+            </div>
+            <div class="flex items-center">
+              <span class="mr-2 text-blue-600">⏰</span>
+              <span>{{ event?.hora }}</span>
+            </div>
+            <div class="flex items-center">
+              <span class="mr-2 text-blue-600">📍</span>
+              <span>{{ event?.lugar }}</span>
+            </div>
+            <div class="flex items-center">
+              <span class="mr-2 text-blue-600">👥</span>
+              <span>{{ event?.boletas }} boletas disponibles</span>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Ubicación</h2>
+            <p class="text-gray-600 mb-2">{{ event?.ciudad }}</p>
+            <div class="relative w-full pb-[56.25%] rounded-xl overflow-hidden">
+              <iframe
+                class="absolute top-0 left-0 w-full h-full border-0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Estadio+Atanasio+Girardot,+Medellin,+Antioquia&output=embed">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="w-full md:w-80 mt-8 md:mt-0 bg-gray-50 p-6 rounded-lg border border-gray-200">
+          <h2 class="text-2xl font-bold text-blue-600 mb-1">Desde {{ event?.precio }}</h2>
+          <p class="text-sm text-gray-500 mb-4">por boleta</p>
+
+          <label class="block mb-2 text-sm font-medium text-gray-700">Cantidad de boletas</label>
+          <select class="w-full border border-gray-300 rounded-lg p-2 mb-4">
+            <option *ngFor="let i of [1,2,3,4,5]">{{ i }}</option>
+          </select>
+
+          <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg mb-2">
+            Comprar Ahora
+          </button>
+          <button class="w-full border border-gray-300 text-gray-700 font-semibold py-3 rounded-lg">
+            Agregar al Carrito
+          </button>
+
+          <div class="text-sm text-gray-500 mt-6 space-y-1">
+            <p>• Pago seguro garantizado</p>
+            <p>• Boletas enviadas por email</p>
+            <p>• Soporte al cliente 24/7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

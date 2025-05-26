@@ -1,59 +1,102 @@
 [
   {
     "id": 1,
-    "titulo": "Concierto en Valledupar",
-    "descripcion": "Un evento musical en vivo.",
-    "fecha": "2025-06-15",
-    "lugar": "Plaza Alfonso López",
-    "img": "/images/parquedelaleyenda.png"
+    "titulo": "DTMF Tour",
+    "fechacompleta": "26 Ene Lun 2026",
+    "categoria": "Concierto",
+    "fecha": "26",
+    "mes" : "Ene",
+    "dia": "Lun",
+    "ano": "2026",
+    "lugar": "Estadio Atanasio Girardot",
+    "imagen": "assets/images/test-events/dtmftour.png",
+    "ciudad" : "Medellin, Antioquia",
+    "banner": "assets/images/test-events/dtmfbanner.png",
+    "boletas": "1200",
+    "hora": "16:00 hrs",
+    "precio": "230000"
   },
   {
     "id": 2,
-    "titulo": "Festival Vallenato",
-    "descripcion": "Celebración anual con música, cultura y tradición.",
-    "fecha": "2025-04-28",
-    "lugar": "Parque de la Leyenda"
+    "titulo": "El Ultimo Baile",
+    "fechacompleta": "01 Jun Dom 2026",
+    "categoria": "Concierto",
+    "fecha": "01",
+    "mes" : "Jun",
+    "dia": "Dom",
+    "ano": "2026",
+    "lugar": "Parque de la Leyenda",
+    "imagen": "assets/images/test-events/elultimobaile.png",
+    "banner": "assets/images/test-events/elultimobailebanner.png",
+    "ciudad" : "Valledupar, Cesar",
+    "boletas": "1800",
+    "hora": "16:00 hrs",
+    "precio": "56000",
+    "ubicacion": ""
   },
   {
     "id": 3,
-    "titulo": "Concierto en Valledupar",
-    "descripcion": "Un evento musical en vivo.",
-    "fecha": "2025-06-15",
-    "lugar": "Plaza Alfonso López"
+    "titulo": "El Fuete",
+    "fechacompleta": "28 Sep Mie 2025",
+    "categoria": "Concierto",
+    "fecha": "28",
+    "mes" : "Sep",
+    "dia": "Mie",
+    "ano": "2025",
+    "lugar": "Parque de la Leyenda",
+    "imagen": "assets/images/test-events/elfuete.png",
+    "ciudad" : "Valledupar, Cesar",
+    "boletas": "1800",
+    "hora": "16:00 hrs",
+    "precio": "47000"
   },
   {
     "id": 4,
-    "titulo": "Festival Vallenato",
-    "descripcion": "Celebración anual con música, cultura y tradición.",
-    "fecha": "2025-04-28",
-    "lugar": "Parque de la Leyenda"
+    "titulo": "UVST Tour",
+    "fechacompleta": "18 Nov Mar 2025",
+    "categoria": "Concierto",
+    "fecha": "18",
+    "mes" : "Nov",
+    "dia": "Mar",
+    "ano": "2025",
+    "lugar": "Estadio Atanasio Girardot",
+    "imagen": "assets/images/test-events/uvsttour.png",
+    "banner": "assets/images/test-events/uvstbanner.png",
+    "ciudad" : "Medellin, Antioquia",
+    "boletas": "80000",
+    "hora": "19:00 hrs",
+    "precio": "450000"
   },
   {
     "id": 5,
     "titulo": "Concierto en Valledupar",
     "descripcion": "Un evento musical en vivo.",
     "fecha": "2025-06-15",
-    "lugar": "Plaza Alfonso López"
+    "lugar": "Plaza Alfonso López",
+    "imagen": "/images/parquedelaleyenda.png"
   },
   {
     "id": 6,
     "titulo": "Festival Vallenato",
     "descripcion": "Celebración anual con música, cultura y tradición.",
     "fecha": "2025-04-28",
-    "lugar": "Parque de la Leyenda"
+    "lugar": "Parque de la Leyenda",
+    "imagen": "/images/parquedelaleyenda.png"
   },
   {
     "id": 7,
     "titulo": "Concierto en Valledupar",
     "descripcion": "Un evento musical en vivo.",
     "fecha": "2025-06-15",
-    "lugar": "Plaza Alfonso López"
+    "lugar": "Plaza Alfonso López",
+    "imagen": "/images/parquedelaleyenda.png"
   },
   {
     "id": 8,
     "titulo": "Festival Vallenato",
     "descripcion": "Celebración anual con música, cultura y tradición.",
     "fecha": "2025-04-28",
-    "lugar": "Parque de la Leyenda"
+    "lugar": "Parque de la Leyenda",
+    "imagen": "/images/parquedelaleyenda.png"
   }
 ]

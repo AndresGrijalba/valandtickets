@@ -1,9 +1,7 @@
-<main class="container mx-auto px-4 py-8">
+<main class="container mx-auto px-4 py-8 bg-gray-50">
     <h1 class="text-3xl font-bold mb-8">Categorías de Eventos</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Tarjeta de categoría: Conciertos -->
       <a href="" class="block">
         <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
           <div class="relative h-40">
@@ -15,7 +13,24 @@
           <div class="p-5">
             <div class="flex items-center mb-4">
               <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                <!-- Icono -->
+                <svg class="text-blue-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M9 18V5l12-2v13"></path>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <circle cx="18" cy="16" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Conciertos</h3>
+                <p class="text-gray-500">42 eventos</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">Disfruta de los mejores artistas en vivo</p>
+            <button class="w-full border border-blue-600 text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50">Ver Eventos</button>
+          </div>
+
+          <div class="p-5">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
                 <svg class="text-blue-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M9 18V5l12-2v13"></path>
                   <circle cx="6" cy="18" r="3"></circle>
@@ -32,8 +47,5 @@
           </div>
         </div>
       </a>
-
-      <!-- Puedes duplicar el bloque anterior para cada categoría cambiando los valores -->
-
     </div>
   </main>

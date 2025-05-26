@@ -3,5 +3,16 @@ export interface IEvent {
   titulo: string,
   descripcion: string,
   fecha: string,
-  lugar: string
+  fechacompleta: string,
+  categoria: string,
+  dia : string,
+  mes : string,
+  lugar: string,
+  imagen: string,
+  ciudad: string,
+  ano: string,
+  boletas: string,
+  hora: string,
+  banner: string,
+  precio: string
 }

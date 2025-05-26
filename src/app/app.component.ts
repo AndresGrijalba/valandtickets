@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { EVENTS_DATA } from './core/constants/data-temporary'
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +10,13 @@ import { EVENTS_DATA } from './core/constants/data-temporary'
 export class AppComponent implements OnInit {
   title = 'valandtickets';
 
-  constructor() { }
+  constructor(public router: Router) { }
+  hideHeaderRoutes = ['/terms', '/create-event', '/management-event'];
+
+  shouldShowHeader(): boolean {
+    return !this.hideHeaderRoutes.includes(this.router.url);
+  }
 
   async ngOnInit() {
-    console.log(EVENTS_DATA)
   }
 }

@@ -1,0 +1,12 @@
+<header class="bg-white shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="text-2xl font-bold text-blue-600 transition-all duration-150 hover:scale-110">{{title}}</a>
+    @if (showActionButton) {
+      <div class="flex items-center gap-4">
+        <a [routerLink]="['/create-event']" routerLinkActive="router-link-active" class="cursor-pointer font-medium text-gray-500 transition-all duration-150 hover:scale-110 hover:text-blue-800">Panel</a>
+        <a [routerLink]="['/events']" routerLinkActive="router-link-active" class="cursor-pointer font-medium text-gray-500 transition-all duration-150 hover:scale-110 hover:text-blue-800">Eventos</a>
+        <a [routerLink]="['/categories']" routerLinkActive="router-link-active" class="font-medium text-gray-500 transition-all duration-150 hover:scale-110 hover:text-blue-800">Categorías</a>
+      </div>
+    }
+  </div>
+</header>
