@@ -6,10 +6,13 @@ import {InicioComponent} from "./features/home/inicio.component";
 import {HttpClientModule} from '@angular/common/http';
 import { PositionselectorComponent } from './features/positionselector/positionselector.component';
 import { TerminosComponent } from './features/terms/terminos.component';
-import { RegisterComponent } from './features/register/register.component';
+import { RegisterComponent } from './features/auth/register/register.component';
 import { CreateEventComponent } from './features/events/components/management-events/create-event/create-event.component';
 import {SharedModule} from './shared/shared.module';
 import {ManagementEventComponent} from './features/events/components/management-events/management-event/management-event.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,12 @@ import {ManagementEventComponent} from './features/events/components/management-
     AppRoutingModule,
     InicioComponent,
     SharedModule,
-
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }
