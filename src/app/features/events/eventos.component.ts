@@ -3,11 +3,11 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
 import {EventService} from '../../core/services/events.service';
 import {firstValueFrom} from 'rxjs';
 import {IEvent} from '../../core/interfaces/event.interface';
-import {NgOptimizedImage} from '@angular/common';
+import {NgIf, NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-eventos',
-  imports: [RouterLink, NgOptimizedImage],
+  imports: [RouterLink, NgOptimizedImage, NgIf],
   templateUrl: './eventos.component.html',
   styleUrl: './eventos.component.css'
 })
@@ -34,9 +34,9 @@ export class EventsComponent implements OnInit {
 
   applyFilters(): void {
     this.filteredEvents = this.events.filter(event => {
-      const matchCategory = this.filters.category ? event.categoria === this.filters.category : true;
-      const matchMonth = this.filters.month ? event.fechacompleta.startsWith(this.filters.month) : true;
-      const matchPrice = this.filters.maxPrice ? Number(event.precio) <= this.filters.maxPrice : true;
+      const matchCategory = this.filters.category ? event.category === this.filters.category : true;
+      const matchMonth = this.filters.month ? event.datec.startsWith(this.filters.month) : true;
+      const matchPrice = this.filters.maxPrice ? Number(event.price) <= this.filters.maxPrice : true;
       return matchCategory && matchMonth && matchPrice;
     });
   }

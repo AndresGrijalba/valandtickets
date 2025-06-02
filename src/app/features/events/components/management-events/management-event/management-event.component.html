@@ -31,24 +31,26 @@
     </div>
 
     <div class="space-y-4">
-      <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+      @for (event of events; track event.id) {
+        <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div class="flex-1">
-            <div class="flex justify-between mb-2">
-              <h3 class="text-xl font-semibold text-gray-900">Nombre del Evento</h3>
-              <span class="px-3 py-1 text-xs font-medium rounded-full bg-green-100 text-green-700">Activo</span>
+            <div class="flex justify-between mb-5">
+              <h3 class="text-xl font-semibold text-gray-900">{{event.title}}</h3>
+              <span class="absolute px-3 py-1 right-14 text-xs font-medium rounded-full bg-green-100 text-green-700">Activo</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
-              <div class="flex items-center gap-2"><i class="ion-ios-calendar"></i> <span>20/06/2025 - 7:00 PM</span></div>
-              <div class="flex items-center gap-2"><i class="ion-md-pin"></i> <span>Teatro ABC</span></div>
-              <div class="flex items-center gap-2"><i class="ion-md-person"></i> <span>90/150 boletas</span></div>
+              <div class="flex items-center gap-1"><i class="ion-ios-calendar"></i> <span>{{event.datec}} - {{event.time}}</span></div>
+              <div class="flex items-center gap-1"><i class="ion-md-pin"></i> <span>{{event.site}}</span></div>
+              <div class="flex items-center gap-1"><i class="ion-md-person"></i> <span>{{event.tickets}} boletas</span></div>
             </div>
             <div class="mt-3 flex items-center gap-4 text-sm font-medium">
-              <span class="text-gray-700">Categoría: Música</span>
+              <span class="text-gray-700">Categoría: {{event.category}}</span>
               <span class="text-green-600">Ingresos: $7.200.000</span>
             </div>
           </div>
-          <div class="flex items-center gap-2">
+
+          <div class="flex items-center mt-2 gap-2">
             <a href="/eventos/1">
               <button class="px-4 py-2 border rounded-md text-sm"><i class="ion-md-eye"></i> Ver</button>
             </a>
@@ -71,17 +73,7 @@
           </div>
         </div>
       </div>
-      <!-- Puedes duplicar este bloque para más eventos -->
-    </div>
-
-    <!-- Sin resultados -->
-    <div class="bg-white rounded-lg shadow-sm text-center py-12 mt-10">
-      <div class="text-gray-400 text-4xl mb-4">📅</div>
-      <h3 class="text-lg font-medium text-gray-900 mb-2">No se encontraron eventos</h3>
-      <p class="text-gray-600 mb-4">Comienza creando tu primer evento</p>
-      <a href="/admin/eventos/nuevo">
-        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Crear Primer Evento</button>
-      </a>
+      }
     </div>
   </main>
 </div>

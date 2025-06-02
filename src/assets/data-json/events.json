@@ -14,25 +14,11 @@
     "banner": "assets/images/test-events/dtmfbanner.png",
     "boletas": "1200",
     "hora": "16:00 hrs",
-    "precio": "230000"
+    "precio": "230000",
+    "mapa": "https://www.google.com/maps?q=Estadio+Atanasio+Girardot,+Medellin,+Antioquia&output=embed"
   },
   {
-    "id": 2,
-    "titulo": "El Ultimo Baile",
-    "fechacompleta": "01 Jun Dom 2026",
-    "categoria": "Concierto",
-    "fecha": "01",
-    "mes" : "Jun",
-    "dia": "Dom",
-    "ano": "2026",
-    "lugar": "Parque de la Leyenda",
-    "imagen": "assets/images/test-events/elultimobaile.png",
-    "banner": "assets/images/test-events/elultimobailebanner.png",
-    "ciudad" : "Valledupar, Cesar",
-    "boletas": "1800",
-    "hora": "16:00 hrs",
-    "precio": "56000",
-    "ubicacion": ""
+    2, "El Ultimo Baile", "01 Jun Dom 2026", "Concierto", "01", "Jun", "Dom", "2026", "Parque de la Leyenda", "assets/images/test-events/elultimobaile.png", "assets/images/test-events/elultimobailebanner.png", "Valledupar, Cesar", "1800", "16:00 hrs", "56000", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21814.406114622572!2d-73.27918446927484!3d10.496779115533847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab83b7540bedf%3A0x3f6957c2b897c4d8!2sParque%20de%20la%20Leyenda!5e0!3m2!1ses-419!2sco!4v1748489504226!5m2!1ses-419!2sco"
   },
   {
     "id": 3,
@@ -48,7 +34,8 @@
     "ciudad" : "Valledupar, Cesar",
     "boletas": "1800",
     "hora": "16:00 hrs",
-    "precio": "47000"
+    "precio": "47000",
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21814.406114622572!2d-73.27918446927484!3d10.496779115533847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab83b7540bedf%3A0x3f6957c2b897c4d8!2sParque%20de%20la%20Leyenda!5e0!3m2!1ses-419!2sco!4v1748489504226!5m2!1ses-419!2sco"
   },
   {
     "id": 4,

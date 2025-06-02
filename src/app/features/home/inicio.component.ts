@@ -9,7 +9,7 @@ import { firstValueFrom } from 'rxjs';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, CommonModule, NgOptimizedImage],
+  imports: [RouterLink, CommonModule],
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })

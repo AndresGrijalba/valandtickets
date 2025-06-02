@@ -54,23 +54,26 @@
   </div>
 </div>
 
-<div class="events-container">
+<div class="events-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
   @for (event of events; track event.id) {
-    <div class="bg-white shadow rounded-lg overflow-hidden event-item max-w-[655px]">
-      <img [ngSrc]="event.imagen" [alt]="event.titulo" width="400" height="400" class="w-full h-60 object-cover"/>
+    <div class="bg-white shadow rounded-lg overflow-hidden w-[240px]">
+      <img *ngIf="event?.image"
+           [src]="'assets/images/test-events/' + event.image"
+           alt="Imagen del evento"
+           class="w-60 h-60 object-cover" />
       <div class="p-4">
-        <h2 class="text-xl font-bold">{{ event.titulo }}</h2>
+        <h2 class="text-xl font-bold">{{ event.title }}</h2>
         <div class="mt-2 flex items-center space-x-2">
-          <div class="text-2xl font-bold text-blue-600">{{ event.fecha }}</div>
+          <div class="text-2xl font-bold text-blue-600">{{ event.date }}</div>
           <div>
-            <p class="text-sm font-semibold text-gray-800">{{ event.mes }}</p>
-            <p class="text-sm text-gray-600">{{ event.dia }}</p>
-            <p class="text-sm text-gray-600">{{ event.ano }}</p>
+            <p class="text-sm font-semibold text-gray-800">{{ event.month }}</p>
+            <p class="text-sm text-gray-600">{{ event.day }}</p>
+            <p class="text-sm text-gray-600">{{ event.year }}</p>
           </div>
         </div>
-        <p class="text-gray-600">{{ event.lugar }}</p>
-        <p class="text-gray-600">{{ event.ciudad }}</p>
-        <div class="flex justify-center">
+        <p class="text-gray-600">{{ event.site }}</p>
+        <p class="text-gray-600 break-words">{{ event.city }}</p>
+        <div class="mt-auto pt-4">
           <a [routerLink]="['/info-events', event.id]"
              class="inline-block bg-blue-500 text-white w-full font-semibold px-10 py-2 mt-4 mb-2 rounded hover:bg-blue-600 text-center">
             Comprar

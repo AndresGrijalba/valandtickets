@@ -10,6 +10,10 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  email = '';
+  password = '';
+  errorMessage = '';
+
   constructor(private authService: AuthService, private router: Router) {}
 
   login() {
@@ -17,6 +21,19 @@ export class LoginComponent {
       this.router.navigate(['/home']);
     }).catch(err => {
       console.error('Error al iniciar sesión', err);
+    });
+  }
+
+  onSubmit() {
+    this.authService.login(this.email, this.password).subscribe({
+      next: (response) => {
+        this.errorMessage = '';
+        localStorage.setItem('token', response.token);
+        this.router.navigate(['/home']);
+      },
+      error: err => {
+        this.errorMessage = err.error.mensaje || 'Error en el login';
+      }
     });
   }
 }

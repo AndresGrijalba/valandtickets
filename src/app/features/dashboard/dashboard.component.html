@@ -1,0 +1,78 @@
+<div class="min-h-screen bg-gray-50 flex">
+  <aside class="w-64 bg-white border-r hidden md:block">
+    <app-side-bar></app-side-bar>
+  </aside>
+
+  <div class="flex-1 p-8">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Estadísticas y Reportes</h1>
+      <p class="text-gray-600">Análisis detallado del rendimiento de la plataforma</p>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex justify-between items-center pb-2">
+          <p class="text-sm font-medium text-gray-600">Ventas Totales</p>
+          <div class="h-4 w-4 bg-blue-500 rounded"></div>
+        </div>
+        <div class="text-2xl font-bold">1200</div>
+        <p class="text-xs text-green-600 mt-1">+12% vs mes anterior</p>
+      </div>
+      <!-- Repite más tarjetas como esta para otros stats -->
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Eventos Más Exitosos -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 3v18h18"></path></svg>
+          <h2 class="text-lg font-semibold">Eventos Más Exitosos</h2>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+            <div>
+              <h4 class="font-medium">Concierto Valle</h4>
+              <p class="text-sm text-gray-600">500 boletas vendidas</p>
+            </div>
+            <div class="text-right text-green-600 font-semibold">$5.000.000</div>
+          </div>
+          <!-- Repite para más eventos -->
+        </div>
+      </div>
+
+      <!-- Distribución por Categorías -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 3v18h18"></path></svg>
+          <h2 class="text-lg font-semibold">Distribución por Categorías</h2>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-sm">
+              <span class="font-medium">Música</span>
+              <span class="text-gray-600">40%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 40%"></div>
+            </div>
+          </div>
+          <!-- Repite para más categorías -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Ingresos Mensuales -->
+    <div class="bg-white p-6 mt-8 rounded-lg shadow">
+      <h2 class="text-lg font-semibold mb-4">Ingresos Mensuales</h2>
+      <div class="h-64 bg-gray-100 rounded-lg flex items-center justify-center text-center text-gray-500">
+        <div>
+          <svg class="h-12 w-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 3v18h18"></path></svg>
+          <p>Gráfico de ingresos mensuales</p>
+          <p class="text-sm">(Integración con biblioteca de gráficos)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

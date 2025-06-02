@@ -8,9 +8,13 @@ import { IEvent } from '../interfaces/event.interface';
 })
 export class EventService {
 
-  private url = '/assets/data-json/events.json';
+  private url = 'http://127.0.0.1:5000/events';
 
   constructor(private http: HttpClient) {}
+
+  addEvent(eventData: any): Observable<any> {
+    return this.http.post(this.url, eventData);
+  }
 
   getEvents(): Observable<IEvent[]> {
     return this.http.get<IEvent[]>(this.url);
@@ -20,5 +24,9 @@ export class EventService {
     return this.getEvents().pipe(
       map(items => items.find(item => item.id === eventId))
     );
+  }
+
+  getEventsByCategory(category: string): Observable<any> {
+    return this.http.get(`${this.url}/${category}`);
   }
 }

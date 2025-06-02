@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {AuthService} from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,7 @@ import {Component, Input} from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(public authService: AuthService) {}
   @Input() title = 'ValandTickets';
   @Input() showActionButton = true;
 }

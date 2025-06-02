@@ -1,0 +1,128 @@
+<main class="container mx-auto px-4 py-8">
+  <a href="/" class="text-blue-600 flex items-center text-primary mb-6 hover:underline">
+    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+    Volver a detalles del evento
+  </a>
+
+  <div class="flex flex-col lg:flex-row gap-8">
+    <!-- Columna izquierda -->
+    <div class="w-full lg:w-3/4">
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h1 class="text-2xl font-bold mb-6">Selección de Localidades</h1>
+
+        <!-- Mapa del estadio -->
+        <div class="bg-green-100 rounded-lg p-6 mb-8 relative" style="height: 300px;">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="bg-green-600 rounded-lg p-4 text-white font-bold">TARIMA</div>
+          </div>
+
+          <!-- Ejemplo de marcador de localidad -->
+          <div class="absolute w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-lg cursor-pointer transform hover:scale-125 transition-transform" style="top: 50px; left: 60px;" title="Localidad 1"></div>
+
+          <div class="absolute bottom-2 left-2 text-xs text-gray-600 flex items-center">
+            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A8.966 8.966 0 0112 15c2.485 0 4.735.998 6.364 2.636M15 10a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            Haz clic en las localidades para ver detalles
+          </div>
+        </div>
+
+        <!-- Lista de localidades -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-semibold mb-4">Localidades Disponibles</h2>
+
+          <!-- Card ejemplo -->
+          <div class="opacity-100 bg-white rounded-lg shadow p-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-4 h-4 bg-red-500 rounded-full"></div>
+                  <h3 class="text-lg font-semibold">Localidad 1</h3>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">Descripción de la localidad.</p>
+                <div class="flex items-center gap-4 text-sm text-gray-500">
+                  <span class="flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2h5"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 11a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+                    50 disponibles
+                  </span>
+                  <span>Máximo 6 por persona</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col md:flex-row items-center gap-4">
+                <div class="text-right">
+                  <div class="text-2xl font-bold text-primary">$50.000</div>
+                  <div class="text-sm text-gray-500">por boleta</div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <button class="border rounded p-2" disabled>-</button>
+                  <span class="w-12 text-center font-semibold">0</span>
+                  <button class="border rounded p-2">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+          <div class="flex items-start">
+            <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12A9 9 0 113 12a9 9 0 0118 0z"></path></svg>
+            <div class="text-sm text-blue-800">
+              <p class="font-semibold mb-1">Información importante:</p>
+              <ul class="space-y-1">
+                <li>• Las boletas se asignarán automáticamente dentro de la localidad seleccionada</li>
+                <li>• Los precios incluyen todos los impuestos</li>
+                <li>• Máximo 6 boletas por transacción</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="w-full lg:w-1/4">
+      <div class="bg-white rounded-lg shadow-md sticky top-8">
+        <div class="p-6">
+          <div class="mb-4">
+            <h2 class="text-xl font-bold mb-2">{{event?.title}}</h2>
+            <div class="text-gray-500 text-sm mb-2">{{event?.datec}} - {{event?.time}}</div>
+            <div class="text-gray-500 text-sm mb-4">{{event?.site}}</div>
+          </div>
+
+          <div class="border-t border-b py-4 my-4">
+            <h3 class="font-bold mb-3">Boletas Seleccionadas</h3>
+            <p class="text-gray-500 text-sm italic">No has seleccionado ninguna boleta</p>
+          </div>
+
+          <div class="space-y-2 mb-6">
+            <div class="flex justify-between">
+              <span class="text-gray-600">Subtotal</span>
+              <span>$0</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Cargo por servicio</span>
+              <span>$0</span>
+            </div>
+            <div class="flex justify-between font-bold text-lg mt-2 pt-2 border-t">
+              <span>Total</span>
+              <span>$0</span>
+            </div>
+          </div>
+
+          <button class="w-full bg-blue-600 text-white py-2 rounded-lg disabled:opacity-50" disabled>Continuar con el Pago</button>
+
+          <div class="mt-4 text-xs text-gray-500">
+            <p class="flex items-center mb-1">
+              <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+              Selección reservada por 10 minutos
+            </p>
+            <p class="flex items-center">
+              <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+              Pago 100% seguro
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
